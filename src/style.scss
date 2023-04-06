@@ -1,0 +1,13 @@
+.content {
+	text-align: center;
+}
+
+.title {
+	margin: 20px;
+	color: teal;
+	font-size: 26px;
+
+	&:hover {
+		color: blue;
+	}
+}
