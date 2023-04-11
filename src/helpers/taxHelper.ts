@@ -1,4 +1,4 @@
-import { TypeProduct } from '../models/TypeProduct';
+import { TypeProduct } from 'models';
 
 const PRECISION = 2;
 

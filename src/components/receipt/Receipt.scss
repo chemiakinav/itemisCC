@@ -1,0 +1,15 @@
+.receiptWrapper {
+    display: grid;
+    background-color: #ced4da;
+    color: #495067;
+    border-radius: 12px;
+    width: 300px;
+    padding: 24px;
+    margin-top: 24px;
+    grid-template-columns: 1fr auto;
+    row-gap: 8px;
+
+    .bold {
+        font-weight: 600
+    }
+}

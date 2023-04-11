@@ -43,7 +43,7 @@ const config: webpack.Configuration = {
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js', '.scss'],
-		modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+		modules: [path.resolve(__dirname, '../src'), 'node_modules'],
 		preferRelative: true,
 	},
 	devtool: 'source-map',
