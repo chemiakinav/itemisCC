@@ -7,7 +7,7 @@ import * as webpack from 'webpack';
 const config: webpack.Configuration = {
 	entry: './src/index.tsx',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '../dist'),
 		filename: 'main.js',
 		publicPath: '/',
 	},

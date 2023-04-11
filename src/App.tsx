@@ -1,15 +1,29 @@
+import Checkbox from 'components/checkbox/Checkbox';
 import Receipt from 'components/receipt/Receipt';
 import { en } from 'locale';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 
-import { productSet1 } from './__mocks__/products';
+import { shoppingBaskets, TypeBasketId } from './__mocks__/products';
 import styles from './style.scss';
 
 const App: FunctionComponent = () => {
+	const [currentBasket, setBasket] = useState<TypeBasketId>('basket_1');
+
 	return (
 		<div className={styles.content}>
 			<div className={styles.title}>{en.title}</div>
-			<Receipt products={productSet1} />
+			<div>
+				{Object.values(shoppingBaskets).map(({ id, name }) => (
+					<Checkbox
+						id={id}
+						key={id}
+						onChange={() => setBasket(id)}
+						name={name}
+						checked={currentBasket === id}
+					/>
+				))}
+			</div>
+			<Receipt products={shoppingBaskets[currentBasket].products} />
 		</div>
 	);
 };

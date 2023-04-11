@@ -93,3 +93,17 @@ export const productSet4: Array<TypeProduct> = [
 		count: 2,
 	},
 ];
+
+export type TypeBasketId = 'basket_1' | 'basket_2' | 'basket_3';
+
+type TypeBasket = {
+	id: TypeBasketId;
+	name: string;
+	products: Array<TypeProduct>;
+};
+
+export const shoppingBaskets: Record<TypeBasketId, TypeBasket> = {
+	basket_1: { id: 'basket_1', name: 'Basket 1', products: productSet1 },
+	basket_2: { id: 'basket_2', name: 'Basket 2', products: productSet2 },
+	basket_3: { id: 'basket_3', name: 'Basket 3', products: productSet3 },
+};
